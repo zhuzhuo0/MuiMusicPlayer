@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>『音乐APP』后台管理-发布公告</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/jquery.dataTables.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+	</head>
+
+	<body>
+		<div class="topbar-wrap white">
+			<div class="topbar-inner clearfix">
+				<div class="topbar-logo-wrap clearfix">
+					<h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+					<ul class="navbar-list clearfix">
+						<li>
+							<a class="on" href="index.html">首页</a>
+						</li>
+					</ul>
+				</div>
+				<div class="top-info-wrap">
+					<ul class="top-info-list clearfix">
+						<li>
+							<a href="adminlist.html">管理员</a>
+						</li>
+						<li>
+							<a href="adminlist.html">修改密码</a>
+						</li>
+						<li>
+							<a id="exit" href="#">退出</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container clearfix">
+			<div class="sidebar-wrap">
+				<div class="sidebar-title">
+					<h1>菜单</h1>
+				</div>
+				<div class="sidebar-content">
+					<ul class="sidebar-list">
+						<li>
+							<a href="#"><i class="icon-font">&#xe018;</i>歌曲管理</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="songlist.html"><i class="icon-font">&#xe005;</i>歌曲列表</a>
+								</li>
+								<li>
+									<a href="songComment.html"><i class="icon-font">&#xe012;</i>歌曲评论</a>
+								</li>
+								<li>
+									<a href="rank_china.html"><i class="icon-font">&#xe006;</i>中文歌曲排名</a>
+								</li>
+								<li>
+									<a href="rank_japan.html"><i class="icon-font">&#xe006;</i>日文歌曲排名</a>
+								</li>
+								<li>
+									<a href="rank_english.html"><i class="icon-font">&#xe006;</i>英文歌曲排名</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="icon-font">&#xe018;</i>意见管理</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="feedback.html"><i class="icon-font">&#xe004;</i>意见反馈</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="icon-font">&#xe018;</i>用户管理</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="userlist.html"><i class="icon-font">&#xe003;</i>用户管理</a>
+								</li>
+								<li>
+									<a href="loginLog.html"><i class="icon-font">&#xe005;</i>登录日志</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="icon-font">&#xe018;</i>管理员</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="adminlist.html"><i class="icon-font">&#xe003;</i>账号设置</a>
+								</li>
+								<li>
+									<a class="has-collected" href="updateNews.html"><i class="icon-font">&#xe003;</i>更新公告</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--/sidebar-->
+			<div class="main-wrap">
+				<div class="crumb-wrap">
+					<div class="crumb-list"><i class="icon-font">&#xe06b;</i><span>欢迎使用音乐APP后台管理工具</span></div>
+				</div>
+				<div class="result-wrap">
+					<div class="result-title">
+						<h1>发布公告</h1>
+						<button class="btn-item" data-task = '0' >删除选中公告</button>
+						<button class="btn-item" data-task = '1' >添加公告</button>
+					</div>
+					<div class="result-content">
+						<div class="table-content">
+							<table id="table_id_example" class="display">
+								<thead>
+									<tr>
+										<th>upid(公告id)</th>
+										<th>update_con(公告内容)</th>
+										<th>update_date(公告时间)</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mask">
+			<div class="add-block">
+				<div class="block-title">
+					<h1>添加公告</h1>
+				</div>
+				<div class="block-content">
+					<dl>
+						<dt>公告内容</dt>
+						<dd>
+							<input id="update_con" type="text" />
+						</dd>
+					</dl>
+				</div>
+				<div class="block-footer">
+					<button class="btn-yes">确认</button>
+					<button class="btn-no">取消</button>
+				</div>
+			</div>
+		</div>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/jquery.dataTables.min.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/updateNews.js"></script>
+	</body>
+
+</html>

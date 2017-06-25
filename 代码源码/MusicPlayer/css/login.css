@@ -1,0 +1,122 @@
+/*header部分样式*/
+
+.login-header {
+	height: auto;
+	padding-top: 36px;
+	background-color: #f32500;
+}
+
+.mui-icon-back:before,
+.mui-icon-left-nav:before {
+	content: '\e471';
+	color: #fff;
+}
+
+.login-header-title {
+	color: #fff;
+	font-size: 20px;
+}
+
+
+/*mbody部分样式*/
+
+.mui-bar-nav~.mui-content {
+	padding-top: 80px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+/*滑动面板样式*/
+.login-slider{
+	position: absolute;
+	top: 230px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.mui-slider .login-slider-group{
+	position: absolute;
+	top: 40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.login-scroll-wrapper{
+	overflow-y: scroll;
+}
+
+.mui-slider-indicator.mui-segmented-control {
+    position: absolute;
+    bottom: auto;
+}
+
+/*滑条*/
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar {
+    position: absolute;
+    top: 40px;
+}
+
+
+/*用户头部-样式*/
+
+.header-block {
+	height: 150px;
+	overflow: hidden;
+	background-image: url(../imgs/drag-menu.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+.header-pic {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 20px auto 0px;
+}
+
+.header-pic img {
+	width: 90px;
+	height: 90px;
+}
+
+
+/*默认样式*/
+
+.mui-control-content {
+	min-height: 200px;
+}
+
+.mui-input-group .mui-input-row {
+	height: auto;
+	padding: 10px 0px;
+}
+/*显示密码*/
+.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #999;
+}
+
+.mui-input-group .mui-button-row {
+    height: auto;
+    padding: 10px 20px;
+}
+
+/*登录板块-样式*/
+
+/*注册板块-样式*/

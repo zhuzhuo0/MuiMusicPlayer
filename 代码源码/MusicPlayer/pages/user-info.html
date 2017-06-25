@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css" />
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/lib/iconfont.css" />
+		<link rel="stylesheet" href="../css/user-info.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav user-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title user-header-title">我的</h1>
+		</header>
+		<div class="mui-content">
+			<!--用户头部-->
+			<div class="user-pic-block">
+				<div class="user-pic">
+					<img src="../imgs/user-pic.jpg" />
+				</div>
+				<span class="user-name"></span>
+			</div>
+			<!--用户信息-->
+			<div class="user-info-block">
+				<div class="user-detail">
+					<ul id="userInfoBlock">
+					<script id="userInfo" type="text/html">
+						<li>
+							<span class="user-detail-title">
+		    					邮箱：
+		    				</span>
+							<span class="user-detail-content">
+		    					<%=user[0]%>
+		    				</span>
+							<i class="iconfont icon-modify" data-changeItem='useremail' data-title='邮箱'>&#xe630;</i>
+						</li>
+						<li>
+							<span class="user-detail-title">
+		    					QQ号：
+		    				</span>
+							<span class="user-detail-content">
+		    					<%=user[1]%>
+		    				</span>
+							<i class="iconfont icon-modify" data-changeItem='userqq' data-title='QQ号'>&#xe630;</i>
+						</li>
+						<li>
+							<span class="user-detail-title">
+		    					电话：
+		    				</span>
+							<span class="user-detail-content">
+		    					<%=user[2]%>
+		    				</span>
+							<i class="iconfont icon-modify" data-changeItem='usertel' data-title='电话' >&#xe630;</i>
+						</li>
+					</script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/template-native.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/userInfo.js"></script>
+	</body>
+
+</html>

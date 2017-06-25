@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css"/>
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/search.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav search-header">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title search-header-title">搜索</h1>
+		</header>
+		<div class="mui-content">
+			<!--搜索框部分-->
+			<div class="search-block">
+				<div class="mui-input-row mui-search">
+		        	<input id="searchCon" type="search" class="mui-input-clear" placeholder="请输入歌曲名、歌手名等">
+		    	</div>
+			</div>
+			<!--搜索历史部分-->
+		    <div class="search-history">
+		    	<span class="search-title">搜索历史</span>
+		    	<div class="search-items-content">
+		    		
+		    	</div>
+		    </div>
+		    <!--搜索内容部分-->
+		    <div class="search-content">
+		    	<ul id="searchItemBlock" class="mui-table-view mui-card">
+					
+	    	    </ul>
+		    </div>
+		</div>
+		<!--搜索历史内容模板-->
+		<script id="historyItemMode" type="text/html">
+			<%for(var i = 0; i < lists.length; i++){%>
+				<span class='history-item' data-sid=<%=lists[i].songid%>>
+					<%=lists[i].songname%>
+				</span>
+			<%}%>
+		</script>
+		<!--搜索具体内容模板-->
+		<script id="searchItemMode" type="text/html">
+			<%if(song.length!=0){%>
+				<%for(var i = 0; i < song.length; i++){%>
+				<li class="mui-table-view-cell search-item" data-sid=<%=song[i].sid%> >
+	                <%=song[i].songName%>
+		        </li>
+		        <%}%>
+			<%}else{%>
+				<li class="mui-table-view-cell no-info">
+	                没有搜索到内容哦,请重新输入关键字(歌曲名,作者,专辑)
+		        </li>
+			<%}%>
+		</script>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/template-native.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/search.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css" />
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/lib/iconfont.css" />
+		<link rel="stylesheet" href="../css/songDetail.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav songDetail-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title songDetail-header-title">歌曲详情</h1>
+			<span id="collectBtn" class="songDetail-collect">收藏</span>
+		</header>
+		<div class="mui-content">
+			<!--歌曲信息-->
+			<div class="songDetail-block">
+				<div class="song-pic">
+					<img src="../imgs/guide/cover.jpg" />
+				</div>
+				<div class="song-detail">
+				</div>
+			</div>
+			<!--歌曲评论-->
+			<div class="songDetail-comment-block">
+
+			</div>
+		</div>
+		<!--底部(添加评论内容)-->
+		<div class="bottom-edit">
+			<i class="iconfont icon-comment">&#xe630;</i>
+			<span class="edit-title">评 论</span>
+		</div>
+		<!--选择添加界面-->
+		<div class="mark" style="display: none;">
+			<div class="choice-block">
+				<!--选择框标题-->
+				<div class="choice-title">
+					选择歌单
+					<i class="iconfont icon-close">&#xe636;</i>
+				</div>
+				<!--选择框内容-->
+				<div class="choice-content">
+					
+				</div>
+			</div>
+		</div>
+		
+		<!--歌曲信息MODE-->
+		<script id="songInfoMode" type="text/html">
+			<dl>
+				<dt>歌名：</dt>
+				<dd class="songName">
+					<%=song.songName%>
+				</dd>
+			</dl>
+			<dl>
+				<dt>作者：</dt>
+				<dd class="author">
+					<%=song.author%>
+				</dd>
+			</dl>
+			<dl>
+				<dt>专辑：</dt>
+				<dd class="songFrom">
+					<%=song.songFrom%>
+				</dd>
+			</dl>
+		</script>
+		<!--歌曲评论信息MODE-->
+		<script id="songCommentMode" type="text/html">
+			<p class="comment-title">歌曲评论：</p>
+			<%if(songComment.length!=0){%>
+			<%for(var i = 0; i < songComment.length; i++){%>
+			<div class="comment-item">
+				<div class="user-pic">
+					<div class="user-pic-block">
+						<img src="../imgs/user-pic.jpg" />
+					</div>
+					<p>
+						<%=songComment[i].comment_from%>
+					</p>
+				</div>
+				<div class="comment-content">
+					<%=songComment[i].comment_con%>
+				</div>
+				<div class="comment-date">
+					<%=songComment[i].comment_date%>
+				</div>
+			</div>
+			<%}%>
+			<%}else{%>
+			<div class="no-comment">
+				歌曲还没有评论哦！赶紧抢个沙发！
+			</div>
+			<%}%>
+		</script>
+		<!--歌单列表MODE-->
+		<script id="formItemMode" type="text/html">
+			<%for(var i = 0; i < lists.length; i++){%>
+			<div class="form-item" data-formid=<%=lists[i].formid%>>
+				<div class="form-pic">
+					<img src="../imgs/cd-pic.jpg"/>
+				</div>
+				<span class="form-text"><%=lists[i].formname%></span>
+			</div>
+			<%}%>
+		</script>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/template-native.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/songDetail.js"></script>
+	</body>
+
+</html>

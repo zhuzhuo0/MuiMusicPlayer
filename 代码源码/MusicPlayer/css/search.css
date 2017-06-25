@@ -1,0 +1,65 @@
+/*header部分样式*/
+.search-header{
+	height: auto;
+	padding-top: 36px;
+	background-color: #f32500;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.mui-icon-back:before, .mui-icon-left-nav:before {
+    content: '\e471';
+    color: #fff;
+}
+.search-header-title{
+	color: #fff;
+	font-size: 20px;
+}
+/*mbody部分样式*/
+.mui-bar-nav~.mui-content {
+	padding-top: 80px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+/*搜索框*/
+.search-block{
+	margin: 25px 20px 0px 20px;
+}
+/*搜索历史*/
+.search-history{
+	margin: 0px 20px;
+}
+.search-items-content:after{
+	content: '';
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+.history-item{
+	float: left;
+	display: block;
+	padding: 5px 10px;
+	background-color: #CCCCCC;
+	color: #FAFAFA;
+	font-size: 16px;
+	border-radius: 4px;
+	margin: 5px;
+}
+/*搜索内容展示*/
+.search-content{
+	padding-bottom: 20px;
+}
+/*搜索内容为空*/
+.no-info{
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	padding-left: 30px;
+	padding-right: 30px;
+}

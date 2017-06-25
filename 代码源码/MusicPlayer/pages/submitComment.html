@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css"/>
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/submitComment.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav submit-header">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title submit-header-title">提交评论</h1>
+		</header>
+		<div class="mui-content">
+			<!--歌曲信息-->
+		    <div class="song-info">
+		    	<div class="song-pic">
+		    		<img src="../imgs/guide/cover.jpg" />
+		    	</div>
+		    	<div class="song-detail">
+		    		<dl>
+		    			<dt>歌名：</dt>
+		    			<dd class="songName">望月</dd>
+		    		</dl>
+		    		<dl>
+		    			<dt>作者：</dt>
+		    			<dd class="author">和乐器乐团</dd>
+		    		</dl>
+		    		<dl>
+		    			<dt>专辑：</dt>
+		    			<dd class="songFrom">四季彩</dd>
+		    		</dl>
+		    	</div>
+		    </div>
+		    <!--评论内容框-->
+		    <div class="comment-block">
+				<textarea id="textarea" rows="5" placeholder="多行文本框"></textarea>
+				<button id="resetText" type="button" class="mui-btn mui-btn-red">取消</button>
+				<button id="submitText" type="button" class="mui-btn mui-btn-blue">提交</button>
+		    </div>
+		</div>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/submitComment.js"></script>
+	</body>
+</html>

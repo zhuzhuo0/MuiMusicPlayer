@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/lib/normalize.css" />
+		<link href="css/lib/mui.min.css" rel="stylesheet" />
+		<link href="css/lib/swiper.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/guide.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="imgs/guide/guide01.jpg"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="imgs/guide/guide02.jpg"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="imgs/guide/guide03.jpg"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="imgs/guide/guide04.jpg"/>
+						<button type="button" class="mui-btn mui-btn-royal mui-btn-outlined guide-btn-enter" onclick="openMainPage()">Start</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/lib/mui.min.js"></script>
+		<script src="js/lib/swiper.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var guide = new Swiper('.swiper-container',{
+				resistanceRatio : 0
+			});
+			mui.plusReady(function(){
+				plus.navigator.closeSplashscreen();
+			});
+			function openMainPage(){
+				plus.storage.setItem('lauchFlag','true');
+				plus.navigator.setFullscreen(false);
+				plus.webview.currentWebview().close();
+			}
+		</script>
+	</body>
+
+</html>

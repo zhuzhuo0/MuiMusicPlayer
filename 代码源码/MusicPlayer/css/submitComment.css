@@ -1,0 +1,92 @@
+/*header部分样式*/
+.submit-header{
+	height: auto;
+	padding-top: 36px;
+	background-color: #F32500;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.mui-icon-back:before, .mui-icon-left-nav:before{
+	content:'\e471';
+	color: #fff;
+}
+.submit-header-title{
+	color: #fff;
+	font-size: 20px;
+}
+/*mbody部分样式*/
+.mui-bar-nav~.mui-content {
+	padding-top: 80px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+/*歌曲信息*/
+.song-info{
+	height: 140px;
+}
+.song-info:after{
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.song-pic{
+	width: 40%;
+	float: left;
+	height: 140px;
+	text-align: center;
+}
+.song-pic img{
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+}
+.song-detail{
+	width: 60%;
+	float: left;
+	padding: 20px 0px 0px 10px;
+	overflow: hidden;
+	height: 140px;
+}
+.song-detail dl{
+	margin:10px 0px 10px 0px;
+}
+.song-detail dl:after {
+	height: 0;
+	content: '';
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+.song-detail dl dt,.song-detail dl dd{
+	overflow: hidden;
+	float: left;
+}
+.song-detail dl dt {
+	width: 30%;
+}
+
+.song-detail dl dd {
+	width: 70%;
+	margin: 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/*评论框*/
+.comment-block{
+	position: relative;
+	padding: 10px 15px;
+	text-align: center;
+}
+.comment-block button{
+	padding: 5px 24px;
+	margin: 0px 10px;
+}

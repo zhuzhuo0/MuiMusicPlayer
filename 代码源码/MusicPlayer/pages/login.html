@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css"/>
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav login-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title login-header-title">登录/注册</h1>
+		</header>
+		<div class="mui-content">
+			<!--头部图片-->
+			<div class="header-block">
+				<div class="header-pic">
+					<img src="../imgs/user-pic.jpg" />
+				</div>
+			</div>
+			<!--选项版-->
+			<div id="slider" class="mui-slider login-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted login-slider-control">
+					<a class="mui-control-item" href="#item1mobile">
+						登录
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						注册
+					</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6" style="background-color: #F32500;"></div>
+				<div class="mui-slider-group login-slider-group">
+					<!--登录部分-->
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper login-scroll-wrapper">
+							<div class="mui-scroll">
+								<form class="mui-input-group mui-card">
+									<div class="mui-input-row">
+										<label>用户名</label>
+										<input id="loginUsername" type="text" class="mui-input-clear" placeholder="请输入用户名">
+									</div>
+									<div class="mui-input-row">
+										<label>密码</label>
+										<input id="loginPassword" type="password" class="mui-input-password" placeholder="请输入密码">
+									</div>
+									<div class="mui-button-row">
+										<button id="loginBtn" type="button" class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!--注册部分-->
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper login-scroll-wrapper">
+							<div class="mui-scroll">
+								<form class="mui-input-group mui-card">
+									<div class="mui-input-row">
+										<label>用户名</label>
+										<input id="registerName" type="text" class="mui-input-clear" placeholder="请输入用户名">
+									</div>
+									<div class="mui-input-row">
+										<label>设置密码</label>
+										<input id="registerPword" type="password" class="mui-input-password" placeholder="请设置密码">
+									</div>
+									<div class="mui-input-row">
+										<label>确认密码</label>
+										<input type="password" class="mui-input-password" placeholder="请再次输入密码">
+									</div>
+									<div class="mui-input-row">
+										<label>邮箱</label>
+										<input id="registerEmail" type="text" class="mui-input-clear" placeholder="请输入邮箱">
+									</div>
+									<div class="mui-input-row">
+										<label>手机</label>
+										<input id="registerTel" type="text" class="mui-input-clear" placeholder="请输入手机号">
+									</div>
+									<div class="mui-input-row">
+										<label>QQ</label>
+										<input id="registerQQ" type="text" class="mui-input-clear" placeholder="请输入QQ">
+									</div>
+									<div class="mui-button-row">
+										<button id="registerBtn" type="button" class="mui-btn mui-btn-block mui-btn-primary">注册</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/login.js"></script>
+	</body>
+
+</html>

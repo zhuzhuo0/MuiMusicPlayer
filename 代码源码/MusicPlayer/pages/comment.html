@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css" />
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/lib/iconfont.css" />
+		<link rel="stylesheet" href="../css/comment.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav comment-header">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title comment-header-title">我的评论</h1>
+		</header>
+		<div class="mui-content">
+		   
+		</div>
+		<!--个人评论MODE-->
+		<script id="selfCommentMode" type="text/html">
+			<%if(songComment.length==0){%>
+				<div class="mui-card no-comment">
+					您暂时还没有对歌曲进行评价，快去评论歌曲吧！
+				</div>
+			<%}else{%>
+				<%for(var i = 0; i < songComment.length;i++){%>
+				<div class="mui-card">
+					<div class="mui-card-header">
+						歌曲：<%=songComment[i].songname%>
+						<i class="iconfont icon-close" data-commentid=<%=songComment[i].comment_id%>>&#xe636;</i>
+					</div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner">
+							<%=songComment[i].comment_con%>
+						</div>
+					</div>
+					<div class="mui-card-footer">
+						<span class="comment-date">
+							<%=songComment[i].comment_date%>
+						</span>
+					</div>
+				</div>
+				<%}%>
+			<%}%>
+		</script>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/template-native.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/comment.js"></script>
+	</body>
+
+</html>

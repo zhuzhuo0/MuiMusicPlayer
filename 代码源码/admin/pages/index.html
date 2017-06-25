@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>『音乐APP』后台管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+	<div class="topbar-wrap white">
+	    <div class="topbar-inner clearfix">
+	        <div class="topbar-logo-wrap clearfix">
+	            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+	            <ul class="navbar-list clearfix">
+	                <li><a class="on" href="index.html">首页</a></li>
+	            </ul>
+	        </div>
+	        <div class="top-info-wrap">
+	            <ul class="top-info-list clearfix">
+	                <li><a href="adminlist.html">管理员</a></li>
+	                <li><a href="adminlist.html">修改密码</a></li>
+	                <li><a id="exit" href="#">退出</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	<div class="container clearfix">
+	    <div class="sidebar-wrap">
+	        <div class="sidebar-title">
+	            <h1>菜单</h1>
+	        </div>
+	        <div class="sidebar-content">
+	            <ul class="sidebar-list">
+	                <li>
+	                    <a href="#"><i class="icon-font">&#xe018;</i>歌曲管理</a>
+	                    <ul class="sub-menu">
+	                    	<li><a href="songlist.html"><i class="icon-font">&#xe005;</i>歌曲列表</a></li>
+	                    	<li><a href="songComment.html"><i class="icon-font">&#xe012;</i>歌曲评论</a></li>
+	                    	<li><a href="rank_china.html"><i class="icon-font">&#xe006;</i>中文歌曲排名</a></li>
+	                    	<li><a href="rank_japan.html"><i class="icon-font">&#xe006;</i>日文歌曲排名</a></li>
+	                    	<li><a href="rank_english.html"><i class="icon-font">&#xe006;</i>英文歌曲排名</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <a href="#"><i class="icon-font">&#xe018;</i>意见管理</a>
+	                    <ul class="sub-menu">
+	                        <li><a href="feedback.html"><i class="icon-font">&#xe004;</i>意见反馈</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <a href="#"><i class="icon-font">&#xe018;</i>用户管理</a>
+	                    <ul class="sub-menu">
+	                        <li><a href="userlist.html"><i class="icon-font">&#xe003;</i>用户管理</a></li>
+	                        <li><a href="loginLog.html"><i class="icon-font">&#xe005;</i>登录日志</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <a href="#"><i class="icon-font">&#xe018;</i>管理员</a>
+	                    <ul class="sub-menu">
+	                        <li><a href="adminlist.html"><i class="icon-font">&#xe003;</i>账号设置</a></li>
+	                        <li>
+									<a href="updateNews.html"><i class="icon-font">&#xe003;</i>更新公告</a>
+								</li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	    <!--/sidebar-->
+	    <div class="main-wrap">
+	        <div class="crumb-wrap">
+	            <div class="crumb-list"><i class="icon-font">&#xe06b;</i><span>欢迎使用音乐APP后台管理工具</span></div>
+	        </div>
+	        <div class="result-wrap">
+	            <div class="result-title">
+	                <h1>后台介绍</h1>
+	            </div>
+	            <div class="result-content">
+	                <ul class="sys-info-list">
+	                    <li>
+	                        音乐播放器后台部分根据功能模块进行划分，各个模块的需求描述如下：
+	                    </li>
+	                    <li>
+	                    	（1）	用户管理模块：
+	                    </li>
+	                    <li class="list-item">
+	                    		用户管理：从后台以管理员身份对用户的各项信息进行修改 
+	                    </li>
+	                    <li>
+	                    	（2）	歌曲管理模块：
+	                    </li>
+	                    <li class="list-item">
+	                    		乐库内容更新：对乐库中歌曲信息进行修改，增加或减少乐库中的歌曲
+	                    </li>
+	                    <li class="list-item">
+	                    	排名更新：更新排行榜
+	                    </li>
+	                    <li class="list-item">
+	                    	歌曲评论管理：对违规的评论进行处理，
+	                    </li>
+	                    <li>
+	                    	（3）	意见管理模块：
+	                    </li>
+	                    <li class="list-item">
+	                    	意见处理：收集用户的反馈意见，对一些问题进行标记
+	                    </li>
+	                    <li>
+	                    	（4）	管理员模块：
+	                    </li>
+	                    <li class="list-item">
+	                    	账号管理：设定管理员账号和访问的权限
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	    <!--/main-->
+	</div>
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/lib/jquery.dataTables.min.js"></script>
+	<script src="../js/lib/base.js"></script>
+	<script src="../js/lib/network.js"></script>
+	<script src="../js/lib/request.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+</html>

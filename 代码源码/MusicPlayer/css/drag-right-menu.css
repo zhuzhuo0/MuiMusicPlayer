@@ -1,0 +1,83 @@
+/*全局样式*/
+body, .mui-content{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #333333;
+	color: #fff;
+	overflow: hidden;
+}
+/*用户头像-样式*/
+.user-block{
+	height: 220px;
+	overflow: hidden;
+	background-image: url(../imgs/drag-menu.jpg);
+	background-size: cover;
+	position: relative;
+	/*background-color: #333333;*/
+}
+.user-pic{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 40px auto 0px;
+}
+.user-pic img{
+	width: 120px;
+	height: 120px;
+}
+.user-name{
+	margin: 0px auto;
+	font-size: 22px;
+	display: block;
+	padding: 10px 0px;
+	text-align: center;
+}
+.user-sign{
+	position: absolute;
+	bottom: 15px;
+	right: 10px;
+	padding: 2px 5px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+}
+.enter-block{
+	text-align: center;
+	margin-top: 10px;
+}
+/*信息部分-样式*/
+.func-block ul{
+	margin-top: 0px;
+}
+.func-block ul{
+	padding: 0px;
+}
+.func-block ul li{
+	list-style: none;
+	padding: 15px;
+	border-bottom: 1px solid #fff;
+	position: relative;
+}
+
+/*底部footer样式*/
+.menu-footer{
+	position: absolute;
+	bottom: 0px;
+	height: 60px;
+	right: 0;
+	left: 0;
+	font-size: 0;
+	border-top: 1px solid #fff;
+	background-color: #FFFFFF;
+}
+.menu-footer span{
+	display: inline-block;
+	width: 50%;
+	font-size: 20px;
+	line-height: 60px;
+	color: #555555;
+	text-align: center;
+}

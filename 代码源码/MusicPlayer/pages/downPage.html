@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css" />
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/lib/iconfont.css" />
+		<link rel="stylesheet" href="../css/downPage.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav download-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title download-header-title">下载管理</h1>
+		</header>
+		<div class="mui-content">
+			<!--下载完成-->
+			<div class="mui-card">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-collapse complete-item-title">
+						<a href="#">
+							下载完成歌曲
+						</a>
+						<ul id="localItemBlock" class="mui-table-view mui-table-view-chevron">
+							
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--正在下载-->
+			<p class="content-title">下载列表</p>
+			<div class="mui-card">
+				<ul id="downloadBlock" class="mui-table-view">
+					<li class="mui-table-view-cell no-download">
+						当前下载列表为空
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--下载项MODE-->
+		<script id="downloadItem" type="text/html">
+			<li class="mui-table-view-cell down-item" data-sid=<%=song.sid%>>
+				<span class="item-name"><%=song.songName%></span>
+			</li>
+		</script>
+		<!--已下载歌曲项-->
+		<script id="localItemMode" type="text/html">
+			<%if(songs.length > 0){%>
+				<%for(var i = 0; i < songs.length; i++){%>
+					<li class="mui-table-view-cell">
+						<span class="item-name"><%=songs[i].name%></span>
+						<i class="iconfont icon-download-cancel local-delete" data-target=<%=i%> >&#xe636;</i>
+					</li>
+				<%}%>
+			<%}else{%>
+				<li class="mui-table-view-cell no-download">
+					当前下载列表为空
+				</li>
+			<%}%>
+		</script>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/template-native.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/downPage.js"></script>
+	</body>
+
+</html>

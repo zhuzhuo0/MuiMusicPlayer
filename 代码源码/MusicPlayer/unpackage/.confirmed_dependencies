@@ -1,0 +1,245 @@
+{
+  "main.html": {
+    "href": "main.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "imgs/guide/cover.jpg",
+      "js/main.js",
+      "css/lib/iconfont.css",
+      "css/main.css",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "css/lib/normalize.css",
+      "js/lib/jquery.min.js",
+      "js/lib/request.js",
+      "fonts/iconfont.woff",
+      "js/lib/template-native.js",
+      "js/lib/base.js",
+      "js/lib/network.js",
+      "css/lib/mui.min.css",
+      "js/showblock.js",
+      "js/audio.js",
+      "imgs/cd-pic.jpg"
+    ],
+    "refer": [
+      "guide.html",
+      "pages/drag-right-menu.html",
+      "pages/login.html",
+      "pages/search.html",
+      "pages/songDetail.html",
+      "pages/downPage.html"
+    ],
+    "priority": 0
+  },
+  "guide.html": {
+    "href": "guide.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/lib/swiper.min.js",
+      "css/guide.css",
+      "imgs/guide/guide04.jpg",
+      "css/lib/swiper.min.css",
+      "imgs/guide/guide03.jpg",
+      "imgs/guide/guide01.jpg",
+      "imgs/guide/guide02.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "main.html",
+      "guide.html"
+    ],
+    "priority": 0
+  },
+  "pages/drag-right-menu.html": {
+    "resources": [
+      "css/drag-right-menu.css",
+      "imgs/drag-menu.jpg",
+      "imgs/user-pic.jpg",
+      "js/drag-right-menu.js",
+      "css/lib/iconfont.css",
+      "js/lib/mui.min.js",
+      "css/lib/mui.min.css",
+      "css/lib/normalize.css",
+      "fonts/iconfont.woff",
+      "js/lib/jquery.min.js"
+    ],
+    "refer": [
+      "pages/user-info.html",
+      "pages/about.html",
+      "main.html",
+      "pages/login.html",
+      "pages/comment.html",
+      "pages/feedback.html",
+      "pages/downPage.html"
+    ]
+  },
+  "pages/user-info.html": {
+    "resources": [
+      "imgs/drag-menu.jpg",
+      "css/lib/iconfont.css",
+      "imgs/user-pic.jpg",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "js/user-info.js",
+      "css/lib/mui.min.css",
+      "css/user-info.css",
+      "css/lib/normalize.css",
+      "fonts/iconfont.woff",
+      "js/lib/jquery.min.js",
+      "js/lib/request.js",
+      "js/userInfo.js",
+      "js/lib/template-native.js",
+      "js/lib/base.js",
+      "js/lib/network.js"
+    ]
+  },
+  "pages/login.html": {
+    "resources": [
+      "imgs/drag-menu.jpg",
+      "imgs/user-pic.jpg",
+      "css/login.css",
+      "js/login.js",
+      "fonts/mui.ttf",
+      "js/lib/base.js",
+      "js/lib/network.js",
+      "js/lib/mui.min.js",
+      "css/lib/mui.min.css",
+      "css/lib/normalize.css",
+      "js/lib/request.js",
+      "js/lib/jquery.min.js"
+    ],
+    "refer": [
+      "main.html"
+    ]
+  },
+  "pages/search.html": {
+    "resources": [
+      "css/search.css",
+      "js/search.js",
+      "js/lib/base.js",
+      "js/lib/network.js",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "css/lib/mui.min.css",
+      "css/lib/normalize.css",
+      "js/lib/request.js",
+      "js/lib/jquery.min.js",
+      "js/lib/template-native.js"
+    ]
+  },
+  "pages/songDetail.html": {
+    "resources": [
+      "imgs/songdetailbg.jpg",
+      "js/songDetail.js",
+      "css/songDetail.css",
+      "imgs/guide/cover.jpg",
+      "css/lib/iconfont.css",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "css/lib/normalize.css",
+      "js/lib/jquery.min.js",
+      "js/lib/request.js",
+      "fonts/iconfont.woff",
+      "js/lib/template-native.js",
+      "js/lib/base.js",
+      "js/lib/network.js",
+      "css/lib/mui.min.css",
+      "imgs/user-pic.jpg",
+      "imgs/cd-pic.jpg"
+    ],
+    "refer": [
+      "pages/submitComment.html"
+    ]
+  },
+  "pages/submitComment.html": {
+    "resources": [
+      "js/submitComment.js",
+      "css/lib/submitComment.css",
+      "imgs/guide/cover.jpg",
+      "js/lib/base.js",
+      "js/lib/network.js",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "css/lib/mui.min.css",
+      "css/lib/normalize.css",
+      "js/lib/request.js",
+      "js/lib/jquery.min.js",
+      "css/submitComment.css"
+    ]
+  },
+  "pages/comment.html": {
+    "resources": [
+      "js/lib/mui.min.js",
+      "css/lib/mui.min.css",
+      "js/lib/base.js",
+      "css/comment.css",
+      "js/lib/network.js",
+      "fonts/mui.ttf",
+      "js/comment.js",
+      "css/lib/normalize.css",
+      "js/lib/request.js",
+      "js/lib/jquery.min.js",
+      "js/lib/template-native.js",
+      "css/lib/iconfont.css",
+      "fonts/iconfont.woff"
+    ]
+  },
+  "pages/feedback.html": {
+    "resources": [
+      "css/lib/feedback.css",
+      "js/lib/feedback.js",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "css/lib/mui.min.css",
+      "js/lib/base.js",
+      "css/feedback.css",
+      "js/lib/network.js",
+      "js/feedback.js",
+      "css/lib/normalize.css",
+      "js/lib/request.js",
+      "js/lib/jquery.min.js"
+    ]
+  },
+  "pages/about.html": {
+    "resources": [
+      "css/about.css",
+      "js/about.js",
+      "js/lib/base.js",
+      "js/lib/network.js",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "css/lib/mui.min.css",
+      "css/lib/normalize.css",
+      "js/lib/request.js",
+      "js/lib/jquery.min.js",
+      "js/lib/template-native.js"
+    ]
+  },
+  "pages/downPage.html": {
+    "resources": [
+      "js/downPage.js",
+      "css/downPage.css",
+      "js/lib/mui.min.js",
+      "fonts/mui.ttf",
+      "css/lib/mui.min.css",
+      "css/lib/normalize.css",
+      "css/lib/iconfont.css",
+      "fonts/iconfont.woff",
+      "js/lib/base.js",
+      "js/lib/network.js",
+      "js/lib/request.js",
+      "js/lib/jquery.min.js",
+      "js/lib/template-native.js"
+    ]
+  }
+}

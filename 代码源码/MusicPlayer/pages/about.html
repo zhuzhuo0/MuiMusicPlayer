@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/lib/normalize.css" />
+		<link href="../css/lib/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/about.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav about-header">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title about-header-title">关于</h1>
+		</header>
+		<div class="mui-content">
+			<p class="about-title">说两句</p>
+			<!--说明-->
+			<div class="explain_block">
+				本次的项目是基于HTML5的手机音乐播放器的设计与实现，是作为我本人的毕业设计。是一次混合应用开发的实践，UI部分采用MUI框架，中间件采用5+Runtime,逻辑采用Javascript书写,后台部分采用PHP实现
+			</div>
+			<!--更新模块-->
+			<p class="about-title">更新说明</p>
+			<div class="update_block">
+				
+			</div>
+		</div>
+		<!--更新信息MODE-->
+		<script id="updateItemMode" type="text/html">
+			<%for(var i = 0; i < updatelist.length; i++){%>
+			<div class="mui-card">
+				<div class="mui-card-header">更新记录</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<%=updatelist[i].update_con%>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<span class="about-date"><%=updatelist[i].update_date%></span>
+				</div>
+			</div>
+			<%}%>
+		</script>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/lib/template-native.js"></script>
+		<script src="../js/lib/base.js"></script>
+		<script src="../js/lib/network.js"></script>
+		<script src="../js/lib/request.js"></script>
+		<script src="../js/about.js"></script>
+	</body>
+
+</html>

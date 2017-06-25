@@ -1,0 +1,13 @@
+.swiper-slide img{
+	float: left;
+	width: inherit;
+}
+.guide-btn-enter {
+	position: absolute;
+	top: 50px;
+	right: 30px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	font-size: 24px;
+}

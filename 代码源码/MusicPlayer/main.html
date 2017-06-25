@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/lib/mui.min.css" rel="stylesheet" />
+		<link href="css/lib/normalize.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/lib/iconfont.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<!--顶部选项卡（div模式）-->
+			<div id="slider" class="mui-slider main-topbar">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted main-slide">
+					<span id="personBtn" class="mui-icon mui-icon-bars person-btn"></span>
+					<a class="mui-control-item mui-active main-slide-title" href="#item1mobile">
+						乐库
+					</a>
+					<a class="mui-control-item main-slide-title" href="#item2mobile">
+						歌单
+					</a>
+					<a class="mui-control-item main-slide-title" href="#item3mobile">
+						排行榜
+					</a>
+					<span id="searchBtn" class="iconfont search-btn">&#xe614;</span>
+				</div>
+				<div class="mui-slider-group main-group">
+					<!--第一个div-->
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper main-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul id="firstDiv" class="mui-table-view">
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--第二个div-->
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper main-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+										<!--等待之后显示内容-->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="handle-songlist add-songlist iconfont">
+							&#xe606;
+						</div>
+						<div class="handle-songlist delete-songlist iconfont">
+							&#xe605;
+						</div>
+					</div>
+					<!--第三个div-->
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper main-scroll-wrapper">
+							<div id="rankBlock" class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+										<!--等待之后显示内容-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部播放控制-->
+			<div id="playDetailBtn" class="player-block">
+				<img class="player-left" src="imgs/guide/cover.jpg" />
+				<div class="player-middle">
+					<span class="bottom-player-songName">歌曲名</span>
+					<p class="player-from">专辑 —— 作者</p>
+				</div>
+				<span id="playerBtn" class="player-right iconfont icon-pause">
+					&#xe600;
+				</span>
+			</div>
+			<!--播放细节窗口（div）-->
+			<div id="playerDetail" class="player-detail">
+				<span id="pdCloseBtn" class="mui-icon mui-icon-close pd-close-btn" onclick="closePlayer()"></span>
+				<span id="pdSongName" class="pd-song-name">歌曲名</span>
+				<span id="pdAuthor" class="pd-author">作者</span>
+				<div class="pd-record">
+					<img src="imgs/guide/cover.jpg" />
+				</div>
+				<div class="pd-song-progress">
+					<div id="pdSongProgress" class="mui-progressbar">
+						<span></span>
+					</div>
+				</div>
+				<span id="pdSongMode" class="pd-song-mode iconfont">&#xe633;</span>
+				<span id="pdSongPrevBtn" class="pd-song-prev-btn iconfont">&#xe602;</span>
+				<span id="pdSongPlayBtn" class="pd-song-play-btn iconfont">&#xe600;</span>
+				<span id="pdSongNextBtn" class="pd-song-next-btn iconfont">&#xe603;</span>
+				<span id="pdSongDownBtn" class="pd-song-download iconfont">&#xe6c8;</span>
+				<span id="pdSongPlayTime" class="pd-song-play-time">00:00</span>
+				<span id="pdSongTotalTime" class="pd-song-total-time">00:00</span>
+			</div>
+		</div>
+		
+		<!--歌单删除选择-->
+		<div class="mark" style="display: none;">
+			<div class="choice-block">
+				<!--选择框标题-->
+				<div class="choice-title">
+					选择歌单
+					<i class="iconfont icon-close">&#xe636;</i>
+				</div>
+				<!--选择框内容-->
+				<div class="choice-content">
+					
+				</div>
+			</div>
+		</div>
+		
+		<!--乐库列表MODE-->
+		<script id="firstDivContent" type="text/html">
+			<%for(var i = 0;i < song.length; i++) {%>
+			<li class="mui-table-view-cell mui-media song-online-item" data-sid='<%=song[i].sid%>' data-index='<%=i%>' data-songName='<%=song[i].songName%>' data-author='<%=song[i].author%>' data-songSrc='<%=baseUrl(song[i].songUrl)%>' data-songFrom='<%=song[i].songFrom%>'>
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="imgs/guide/cover.jpg">
+					<div class="mui-media-body">
+						<span class="first-div-songName"><%=song[i].songName%> - <%=song[i].author%></span>
+						<p class='mui-ellipsis first-div-songFrom'>
+							<%=song[i].songFrom%>
+						</p>
+					</div>
+					<i class="iconfont icon-more" data-sid='<%=song[i].sid%>' data-songSrc='<%=baseUrl(song[i].songUrl)%>' data-songName='<%=song[i].songName%>' >&#xe60e;</i>
+				</a>
+			</li>
+			<%}%>
+		</script>
+		
+		<!--本地列表MODE-->
+		<script id="localItemMode" type="text/html">
+			<%if(songs.length > 0){%>
+				<%for(var i = 0; i < songs.length; i++){%>
+					<li class="mui-table-view-cell song-download-item" data-sid='0' data-index='<%=i%>' data-songName='<%=songs[i].name%>' data-author='未知' data-songSrc='<%=songs[i].fullPath%>' data-songFrom='未知'>
+						<span class="item-name"><%=songs[i].name%></span>
+					</li>
+				<%}%>
+			<%}else{%>
+				<li class="mui-table-view-cell no-download">
+					当前下载列表为空
+				</li>
+			<%}%>
+		</script>
+		
+		<!--歌单列表MODE(蒙版)-->
+		<script id="formItemMode" type="text/html">
+			<%for(var i = 0; i < lists.length; i++){%>
+			<div class="form-item" data-formid=<%=lists[i].formid%>>
+				<div class="form-pic">
+					<img src="imgs/cd-pic.jpg"/>
+				</div>
+				<span class="form-text"><%=lists[i].formname%></span>
+			</div>
+			<%}%>
+		</script>
+
+		<!--具体歌单MODE-->
+		<script id="userFormMode" type="text/html">
+			<%for(var i = 0; i < lists.length; i++){%>
+			<li class="mui-table-view-cell mui-collapse user-form" data-formid=<%=lists[i].formid%>>
+				<a href="#">
+					<img class="mui-media-object mui-pull-left" src="imgs/guide/cover.jpg">
+					<div class="mui-media-body">
+						<%=lists[i].formname%>
+						<p class='mui-ellipsis'>总共:<span class="songs-num">12</span>首</p>
+					</div>
+				</a>
+				<ul class="mui-table-view mui-table-view-chevron songitem-parent" data-formid=<%=lists[i].formid%>>
+
+				</ul>
+			</li>
+			<%}%>
+		</script>
+		
+		<!--具体歌单项MODE-->
+		<script id="userFormItemMode" type="text/html">
+			<%if(song.length==0){%>
+			<li class="mui-table-view-cell">
+				<a href="#">当前列表为空，请添加歌曲！</a>
+			</li>
+			<%}else{%>
+			<%for(var i = 0; i < song.length; i++){%>
+			<li class="mui-table-view-cell selform-item song-form-item" data-index=<%=i%> data-sid=<%=song[i].sid%> data-author=<%=song[i].author%> data-songName=<%=song[i].songName%> data-songSrc=<%=baseUrl(song[i].songUrl)%> data-songFrom=<%=song[i].songFrom%> >
+				<a href="#">
+					<%=song[i].author%>-
+					<%=song[i].songName%>
+				</a>
+			</li>
+			<%}%>
+			<%}%>
+		</script>
+		<!--排行榜-框架-->
+		<script id="rankBlockMode" type="text/html">
+			<div style="padding: 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-negative">
+					<a class="mui-control-item mui-active rank-tap" data-ranktable="rank_japan" data-target="rank-block01" href="#item1">日文top10</a>
+					<a class="mui-control-item rank-tap" data-ranktable="rank_china" data-target="rank-block02" href="#item2">中文top10</a>
+					<a class="mui-control-item rank-tap" data-ranktable="rank_english" data-target="rank-block03" href="#item3">英文top10</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+					<ul class="mui-table-view rank-block01">
+						
+					</ul>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<ul class="mui-table-view rank-block02">
+						
+					</ul>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<ul class="mui-table-view rank-block03">
+						
+					</ul>
+				</div>
+			</div>
+		</script>
+		<!--排行榜-单曲模板MODE-->
+		<script id="rankItemMode" type="text/html">
+			<%for(var i = 0; i < song.length; i++){%>
+			<li class="mui-table-view-cell rank-item" data-sid=<%=song[i].sid%>>
+				<span class="rank-index"><%=i+1%></span>
+				<%=song[i].songName%>-<%=song[i].author%>
+			</li>
+			<%}%>
+		</script>
+
+		<script src="js/lib/mui.min.js"></script>
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/lib/template-native.js"></script>
+		<script src="js/lib/base.js"></script>
+		<script src="js/lib/network.js"></script>
+		<!--<script src="js/lib/webviewGroup.js"></script>-->
+		<script src="js/lib/request.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/showblock.js"></script>
+		<script src="js/audio.js"></script>
+	</body>
+
+</html>

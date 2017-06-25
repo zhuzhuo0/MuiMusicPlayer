@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/lib/normalize.css"/>
+		<link rel="stylesheet" href="../css/lib/mui.min.css">
+		<link rel="stylesheet" href="../css/lib/iconfont.css"/>
+		<link rel="stylesheet" href="../css/drag-right-menu.css">
+	</head>
+	<body>
+		<div class="mui-content">
+			<!--用户部分（头像、用户名、积分、签到）-->
+			<div class="user-block">
+				<div class="user-pic">
+					<img src="../imgs/user-pic.jpg" />
+				</div>
+				<div class="login-block">
+					
+				</div>
+				<!--<div class="enter-block">
+					<button type="button" class="mui-btn mui-btn-red" onclick="openLoginPage()">登录/注册</button>
+				</div>-->
+				<!--<span class="user-name">猪猪o0</span>-->
+			</div>
+			<!--侧面功能列表-->
+			<div class="func-block">
+				<ul>
+					<li onclick="openUserInfoPage()">
+						<i class="iconfont icon-user">&#xe64b;</i>
+						用户信息
+					</li>
+					<li onclick="openCommentPage()">
+						<i class="iconfont icon-mycomment">&#xe627;</i>
+						我的评论
+					</li>
+					<li onclick="openDownPage()">
+						<i class="iconfont icon-download">&#xe6c8;</i>
+						下载管理
+					</li>
+					<li onclick="openFeedBackPage()">
+						<i class="iconfont icon-mykefu">&#xe638;</i>
+						问题反馈
+					</li>
+					<li onclick="exitLogin()">
+						<i class="iconfont icon-userout">&#xe68c;</i>
+						退出登录
+					</li>
+				</ul>
+			</div>
+			<!--底部设置退出-->
+			<div class="menu-footer">
+				<span onclick="openAboutPage()">
+					<i class="iconfont icon-about">&#xe67a;</i>
+					关于
+				</span>
+				<span onclick="exitApp()">
+					<i class="iconfont icon-quit">&#xe626;</i>
+					退出
+				</span>
+			</div>
+		</div>
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/drag-right-menu.js"></script>
+</body>
+
+</html>

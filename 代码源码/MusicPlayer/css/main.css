@@ -1,0 +1,398 @@
+body {
+	overflow: hidden;
+}
+
+
+/*顶部样式*/
+
+.mui-content{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+.main-topbar {
+	position: absolute;
+	top: 0;
+	bottom: 60px;
+	left: 0;
+	right: 0;
+}
+
+.main-slide {
+	background-color: #f32500;
+	padding-top: 25px;
+}
+
+.mui-slider .main-slide .main-slide-title {
+	padding-top: 10px;
+	padding-bottom: 8px;
+	font-size: 18px;
+	color: #CCCCCC;
+	float: left;
+	width: 20%;
+}
+
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted.main-slide .mui-control-item.mui-active {
+	color: #FFFFFF;
+}
+
+.main-slide .person-btn,
+.main-slide .search-btn {
+	float: left;
+	width: 20%;
+	border: none;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 30px;
+	margin: 13px 0px 0px 0px;
+}
+
+
+/*切换部分*/
+
+.mui-slider .main-group {
+	position: absolute;
+	top: 81px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.main-scroll-wrapper {
+	overflow-y: auto;
+}
+
+.mui-control-content {
+	background-color: white;
+	min-height: 300px;
+}
+
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+
+
+/*底部播放*/
+
+.player-block {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	border-top: 1px solid #CCCCCC;
+	height: 60px;
+	background: #FFFFFF;
+}
+
+.player-left {
+	float: left;
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+}
+
+.player-middle {
+	float: left;
+	margin-top: 10px;
+}
+
+.player-from {
+	margin: 0px;
+}
+
+.player-right {
+	float: right;
+	width: 60px;
+	height: 60px;
+	display: block;
+	line-height: 60px;
+	text-align: center;
+}
+
+
+/*歌曲播放具体细节*/
+
+.player-detail {
+	display: none;
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	background-color: rgba(0, 0, 0, .85);
+}
+
+.pd-close-btn{
+	position: absolute;
+	top: 36px;
+	left: 25px;
+	color: #fff;
+	font-size: 30px;
+}
+.pd-song-name {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    margin-left: -100px;
+    display: block;
+    width: 200px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.pd-author{
+	position: absolute;
+	top: 90px;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+	color: #fff;
+	text-align: center;
+	display: block;
+}
+.pd-record{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 50%;
+	left: 50%;
+	margin-left:-125px;
+	top: 130px;
+}
+.pd-record img{
+	width: 250px;
+	height: 250px;
+}
+.pd-song-lrc{
+	position: absolute;
+	top: 410px;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+}
+.pd-song-progress{
+	position: absolute;
+	top: 450px;
+	width: 300px;
+	/*height: 30px;*/
+	padding: 10px 0px;
+	line-height: 30px;
+	left: 50%;
+	margin-left: -150px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+}
+.pd-song-progress .mui-progressbar{
+	height: 4px;
+}
+.pd-song-mode,.pd-song-prev-btn,.pd-song-play-btn,.pd-song-next-btn,.pd-song-download{
+	position: absolute;
+	color: #fff;
+	font-size: 30px;
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	top: 510px;
+}
+.pd-song-mode{
+	left: 10px;
+}
+.pd-song-download{
+	right: 10px;
+}
+.pd-song-prev-btn{
+	left: 80px;
+}
+.pd-song-next-btn{
+	right: 80px;
+}
+.pd-song-play-btn{
+	width: 80px;
+	height: 80px;
+	left: 50%;
+	margin-left: -40px;
+	line-height: 80px;
+	font-size: 60px;
+	top: 493px;	
+}
+.pd-song-play-time,.pd-song-total-time{
+	display: block;
+	color: #fff;
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.pd-song-play-time{
+	top: 470px;
+	left: 13px;
+}
+.pd-song-total-time{
+	top: 470px;
+	right: 13px;
+}
+/*乐库-部分样式*/
+
+.icon-block {
+	float: right;
+	margin: 10px 10px 0px 0px;
+}
+
+.mui-media-body {
+	float: left;
+}
+
+.first-div-songName{
+	display: block;
+	width: 240px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/*歌单-部分样式*/
+.handle-songlist{
+	position: absolute;
+	right: 20px;
+	z-index: 2;
+	width: 60px;
+	height: 60px;
+	/*border: 1px solid #EEEEEE;*/
+	border-radius: 50%;
+	text-align: center;
+	line-height: 60px;
+	font-size: 30px;
+}
+.add-songlist{
+	bottom: 100px;
+	color: #FFFFFF;
+	background-color: #f0ad4e;
+}
+.delete-songlist{
+	bottom: 20px;
+	color: #FFFFFF;
+	background-color: #F32500;
+}
+.list-location{
+	padding: 10px 15px 0px 15px;
+	display: inline-block;
+	font-size: 18px;
+}
+
+/*歌单状态——未登录*/
+.no-login{
+	padding: 10px 15px 15px 15px;
+}
+.no-login-title{
+	padding: 10px 15px 0px 15px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 18px;
+}
+.no-login-btn-block{
+	text-align: center;
+}
+.no-login-btn{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/*歌单删除蒙版*/
+.mark{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background-color: rgba(0,0,0,.6);
+}
+.choice-block{
+	border-radius: 5px;
+	color: #555555;
+	box-sizing: border-box;
+	border: 1px solid #C0C0C0;
+	position: absolute;
+	width: 300px;
+	max-height: 200px;
+	overflow: hidden;
+	top: 50%;
+	margin-top: -100px;
+	left: 50%;
+	margin-left:-150px;
+	background-color: #FFFFFF;
+}
+.choice-title{
+	box-sizing: border-box;
+	padding: 10px 15px;
+	border-bottom: 1px solid #C0C0C0;
+}
+.choice-content{
+	box-sizing: border-box;
+	padding: 0px 10px 10px 10px;
+	position: relative;
+	overflow-y: scroll;
+	max-height: 158px;
+}
+.form-item{
+	height: 60px;
+	line-height: 60px;
+}
+.from-item:after{
+	content: '';
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+.form-item+.form-item{
+	border-top: 1px solid #C0C0C0;
+}
+.form-pic{
+	float: left;
+	margin-top: 5px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+.form-pic img{
+	width: 50px;
+	height: 50px;
+}
+.form-text{
+	float: left;
+	width: 200px;
+	padding-left: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/*切换div（第三个）*/
+.mui-table-view-cell:after {
+    right: 15px;
+}
+.rank-index{
+	float: left;
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	margin: 0px 20px 0px 10px;
+	border-radius: 50%;
+	background-color: #dd524d;
+	color:#fff;
+}
